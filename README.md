@@ -7,6 +7,10 @@ Account service for icommerce, this is the example of creating extensible & scal
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+
+## Solution Diagram
+![](https://i.imgur.com/C4LF3v8.png)
+
 ## Structure
 ```
 .
