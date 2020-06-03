@@ -11,6 +11,17 @@ These instructions will get you a copy of the project up and running on your loc
 ## Solution Diagram
 ![](https://i.imgur.com/C4LF3v8.png)
 
+## Postman Collection
+https://www.getpostman.com/collections/c52b25bcf546c568e03a
+```
+Create Postman environment: development
+Add 3 variables: 
+- token: null
+- INVENTORY_URL: http://localhost:3001
+- ACCOUNT_URL: http://localhost:3000
+```
+
+
 ## Structure
 ```
 .
