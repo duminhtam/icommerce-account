@@ -82,7 +82,7 @@ yarn test:e2e
 Get the coverage report
 
 ```
-yarn test:e2e
+yarn test:cov
 ```
 
 ### And coding style tests
