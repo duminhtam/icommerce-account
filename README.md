@@ -50,12 +50,26 @@ What things you need to install & start development
 * Node.js v10 or above
 * Docker & Docker Compose to start Redis & PostgresDB
 
-### Installing
+### Installing & start development
 
-Install all package using yarn
+1. Start docker containers
+
+```
+docker-compose up -d
+```
+2. Install all package using yarn
 
 ```
 yarn install
+```
+3. Running the app
+
+```bash
+# development
+$ yarn start
+
+# watch mode
+$ yarn start:dev
 ```
 
 ## Running the tests
@@ -93,19 +107,34 @@ We using eslint standard
 yarn lint
 ```
 
-## Running the app
-
-```bash
-# development
-$ yarn start
-
-# watch mode
-$ yarn start:dev
-```
-
 ### Config
 All the environment config store in .env
 
+```dotenv
+# Development will enable Data Synchronize
+NODE_ENV=development
+
+# Application/Service
+PORT=3000
+## USER_SERVICE
+USER_SERVICE_HOST=localhost
+USER_SERVICE_PORT=4000
+## AUTH_SERVICE
+AUTH_SERVICE_HOST=localhost
+AUTH_SERVICE_PORT=4010
+
+# Database
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5455
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=account
+
+# JWT Config
+JWT_SECRET=thisIsSecre(t)
+JWT_EXPIRES_IN=1h
+
+```
 
 ## API Documents (swagger)
 
