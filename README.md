@@ -46,6 +46,10 @@ Add 3 variables:
 
 ```
 
+### Request/Response pipeline
+
+![](https://github.com/duminhtam/icommerce-inventory/blob/master/README/Architecture/request-response-pipeline.png?raw=true)
+
 ## DB Diagram
 We use 3 Postgres Databases, each microservice’s persistent data private to that service and accessible only via its API. A service’s transactions only involve its database.
 
