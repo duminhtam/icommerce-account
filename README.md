@@ -1,4 +1,4 @@
-# Inventory Service
+# Account service
 
 Account service for icommerce, this is the example of creating extensible & scalable nodeJS backend microservices. This project is follow **The Twelve-Factor App**
 
@@ -7,9 +7,13 @@ Account service for icommerce, this is the example of creating extensible & scal
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-
 ## Solution Diagram
+This solution follow Microservice, Services must be loosely coupled so that they can be developed, deployed and scaled independently and different services have different data storage requirements
+
+### Components Diagram
 ![](https://i.imgur.com/C4LF3v8.png)
+### Microservice Architecture
+![](https://github.com/duminhtam/icommerce-inventory/blob/master/README/Architecture/architecture-overview.png?raw=true)
 
 ## Postman Collection
 https://www.getpostman.com/collections/c52b25bcf546c568e03a
@@ -22,7 +26,7 @@ Add 3 variables:
 ```
 
 
-## Structure
+## Code Structure
 ```
 .
 ├── migrations          
@@ -42,6 +46,19 @@ Add 3 variables:
 
 ```
 
+## DB Diagram
+We use 3 Postgres Databases, each microservice’s persistent data private to that service and accessible only via its API. A service’s transactions only involve its database.
+
+![](https://github.com/duminhtam/icommerce-inventory/blob/master/README/DB/merged.png?raw=true)
+
+## Sequence Diagram
+1. User Register SD
+
+![](https://github.com/duminhtam/icommerce-inventory/blob/master/README/SD/User%20Register.png?raw=true)
+
+2. User Login SD
+
+![](https://github.com/duminhtam/icommerce-inventory/blob/master/README/SD/User%20Login.png?raw=true)
 
 ### Prerequisites
 
